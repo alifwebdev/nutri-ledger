@@ -57,6 +57,6 @@ Route::middleware('auth:sanctum')->group(function () {
 
     // GET /api/summary/monthly?year=2026&month=2
     Route::get('summary/monthly', [SummaryController::class, 'monthly'])
-        ->name('summary.monthly');
+        ->name('summary.monthly.store');
 
 });
