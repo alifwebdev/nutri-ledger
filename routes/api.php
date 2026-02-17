@@ -29,7 +29,9 @@ Route::middleware('auth:sanctum')->group(function () {
     // GET    /api/meals/{id}         show
     // PUT    /api/meals/{id}         update
     // DELETE /api/meals/{id}         delete
-    Route::apiResource('meals', MealController::class);
+    Route::apiResource('meals', MealController::class)
+    ->names('api.meals');
+
 
     // ── Expenses — static routes MUST come before apiResource ─────────
     // GET /api/expenses/categories
@@ -41,7 +43,8 @@ Route::middleware('auth:sanctum')->group(function () {
     // GET    /api/expenses/{id}      show
     // PUT    /api/expenses/{id}      update
     // DELETE /api/expenses/{id}      delete
-    Route::apiResource('expenses', ExpenseController::class);
+    Route::apiResource('expenses', ExpenseController::class)
+    ->names('api.expenses');
 
     // ── Summaries ──────────────────────────────────────────────────────
     // GET /api/summary/dashboard
